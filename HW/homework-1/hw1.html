@@ -1,0 +1,115 @@
+<!--
+By Bilash Sarkar
+1-30-25
+
+CISC 3300 HW1
+
+This lab uses h1, p, and src elements to create a simple business webpage.
+I added some basic javascript and css for fun.
+
+-->
+
+<html lang="en">
+    <style>
+        h1{
+            text-align: center;
+            color: white;
+            padding-top: 30px;
+        }
+        h4{
+            text-align: center;
+            color:papayawhip;
+        }
+
+        img{
+            width: 400px;
+            height: 400px;
+        }
+        
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .black{
+            background: black;
+            height:63%;
+            width: 100%; 
+        }
+
+        .white{
+            background: white;
+            height: 37%;
+            width: 100%; 
+        }
+
+        .wrap{
+            height: 130vh;
+        }
+
+        p{
+            text-align: center;
+        }
+
+    </style>
+
+    <!-- I wanted there to be a thank you message after clicking submit-->
+    <script> 
+        function showThankYouMessage() {
+            alert("Thank you for signing up! We will be in touch soon.");
+        }
+    </script>
+
+    <body>
+
+        <div class = "wrap">
+
+            <div class = "black"> 
+
+                <div>
+                    <h1><strong>Paw & Order</strong></h1>
+                    <h4>The Purrfect Lawyers</h2>
+                </div>
+        
+                <div>
+                    <img src = "headshot.JPG", alt = "our team", class="center">
+                    <h3 style="text-align: center; color: #ffffff;">Simon B., Penelope F., and John S.</h3>
+                    <p style = "color:white;">The worlds highest rated lawyers</p>
+
+                </div>
+    
+            </div>
+    
+            <div class = "white">
+    
+                <p style = "padding-left: 28%; padding-right: 28%; padding-top:10px; padding-bottom: 50px;">
+                    Our firm specializes in providing exceptional legal counsel with precision and diligence. Combining a commitment to justice with strategic expertise, we offer a client-centered approach tailored to meet diverse legal needs. Whether navigating complex cases or advocating for fair outcomes, we prioritize integrity, professionalism, and, above all, results.
+                </p>
+
+                <div style="text-align: center;">
+
+                <fieldset>
+                    <legend>Sign Up for More Info!</legend>
+                    <label>First Name:<br />
+                    <input type="text" name="firstName" /></label><br />
+                    <label>Last Name:<br />
+                    <input type="text" name="lastName" /></label><br />
+                    <label>Email:<br />
+                    <input type="text" name="email" /></label>
+                    <p></p>
+                    <input type="submit" value="Submit" onclick="showThankYouMessage()" />
+                </fieldset>
+
+                </div>
+
+    
+            </div>
+
+        </div>
+        
+    </body>
+
+
+</html>

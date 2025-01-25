@@ -1,0 +1,25 @@
+CISC 3300 SP24 
+Homework 1 
+1. What is HTML? What does it do? 
+
+HTML is a markup language consisting of a set of rules that defines how the layout and presentation of text and images should appear in a digital document. 
+
+
+2. Access https://www.fordham.edu/. In your own words, describe how this webpage uses structure to convey meaning and navigation options to the user. 
+
+The webpage utilizes several headings, most significantly, the “Fordham University” heading on the top left, showing the user that they are accessing Fordham’s website. Then, the website uses a smaller heading for the navigation options. This makes them stand out from the rest of the website, directing the user to look through the options. Then, below these headings, is an image of the university, once again showing that this webpage is for Fordham University. They also have some Fordham news sections that utilize a heading to give the title, followed by a paragraph element to give a brief summary.
+
+
+3. What is an HTML element? Tag? Attribute? 
+
+An HTML element is a building block of websites, allowing for the structure and formatting of information on a website. Tags define the type of element we are adding. For example, <h> would be a heading, <p> would be a paragraph, etc. These are essential to the structure of a website because they are their unique and essential functions. Lastly, attributes are additional information about an element. For example, for an image, you can add a description attribute to describe the image.
+
+
+4. What does it mean when an element has semantic meaning? And structural meaning? 
+
+Elements with semantic meaning are intended to convey meaning by their element type, even if the element is indistinguishable from other elements visually. Elements with structural meaning are intended to define the website's layout, like <div>, which divides the website's content.
+
+
+5. What is the default behavior when submitting a HTML form?
+
+The form submits the information to the URL provided in the attribute section when defining the form.
