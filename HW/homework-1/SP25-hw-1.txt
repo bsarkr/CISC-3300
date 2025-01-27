@@ -12,7 +12,7 @@ The webpage utilizes several headings, most significantly, the “Fordham Univer
 
 3. What is an HTML element? Tag? Attribute? 
 
-An HTML element is a building block of websites, allowing for the structure and formatting of information on a website. Tags define the type of element we are adding. For example, <h> would be a heading, <p> would be a paragraph, etc. These are essential to the structure of a website because they are their unique and essential functions. Lastly, attributes are additional information about an element. For example, for an image, you can add a description attribute to describe the image.
+An HTML element is a building block of websites, allowing for the structure and formatting of information on a website. Tags define the type of element we are adding. For example, <h> and </h> would be a start and end tags for heading, <p> and </p> would be a paragraph, etc. The content inside of these tags are transformed based on the type of tag used. Lastly, attributes are additional information about an element. For example, for an image, you can add a description attribute to describe the image. Elements format the content wrapped inside them.
 
 
 4. What does it mean when an element has semantic meaning? And structural meaning? 
@@ -22,4 +22,4 @@ Elements with semantic meaning are intended to convey meaning by their element t
 
 5. What is the default behavior when submitting a HTML form?
 
-The form submits the information to the URL provided in the attribute section when defining the form.
+The form submits the information to the URL provided in the attribute section when defining the form. If there is no URL added, then the information is submitted to the current URL, meaning it's sent to the same page where the form is located.
