@@ -1,0 +1,95 @@
+<!--
+Bilash Sarkar
+Prof. Hishon
+CISC 3300
+In Class 6
+
+-->
+
+
+<html>
+
+    <head>
+
+        <style>
+
+            .flex-container {
+                display: flex;
+
+                flex-direction: column;
+
+                align-items: center;
+
+            }
+
+            .flex-item {
+                width: 200px;
+                height: 200px;
+                background-color: blue;
+                color: white;
+                margin: 20px;
+            }
+
+
+            .grid-container {
+                /* we define a grid container */
+                display: grid;
+
+                /*we define rows and columns, they define a track based on the number of values given and the value of those values */
+                /* here we define 6 horizontal rows 100px in length*/
+                grid-template-rows: 100px 100px 100px 100px 100px;
+                /*grid-template-rows: repeat(5, 100px);*/
+                /* here we define 6 vertical columns 100px in length*/
+                grid-template-columns: 100px 100px 100px 100px 100px;
+                /*grid-template-columns: repeat(5, 100px);*/
+            }
+
+            .grid-item-1 {
+                /*we define where we want our first item to span in the grid*/
+                grid-row-start: 1;
+                grid-row-end: 5;
+                grid-column-start: 1;
+                grid-column-end: 2;
+                background-color: blue;
+            }
+
+            .grid-item-2 {
+                grid-row-start: 1;
+                grid-row-end: 3;
+                grid-column-start: 3;
+                grid-column-end: 5;
+                background-color: green;
+
+                /*display: flex;*/
+                /*justify-content: center;*/
+            }
+
+            .grid-item {
+                color: white
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="flex-container">
+            <div id="first-flex-item" class="flex-item">
+                div1
+            </div>
+            <div class="flex-item">div2</div>
+            <div class="flex-item">div3</div>
+        </div>
+
+        
+
+        <!--CSS Grid-->
+        <div class="grid-container">
+            <div class="grid-item-1 grid-item">div1</div>
+            <div class="grid-item-2 grid-item">div2</div>
+        </div>
+
+    </body>
+
+</html>
