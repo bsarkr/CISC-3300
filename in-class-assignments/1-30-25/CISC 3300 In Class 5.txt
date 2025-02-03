@@ -1,0 +1,12 @@
+﻿Bilash Sarkar
+In Class 5
+CISC 3300
+
+
+
+
+1. Hex codes
+2. Typography
+3. font-face
+4. List-style: Shorthand
+5. Object-fit
