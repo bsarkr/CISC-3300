@@ -1,0 +1,210 @@
+<!--
+By Bilash Sarkar
+2-6-25
+
+CISC 3300 HW2
+
+This lab adds to HW 1 by utilizing links and fonts.
+
+-->
+
+<html lang="en"> <!--Adding fonts to the webpage-->
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Knewave&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    </head>
+
+    <style>
+        h1{
+            text-align: center;
+            color: white;
+            padding-top: 15px;
+        }
+        h4{
+            text-align: center;
+            color:papayawhip;
+            margin:0;
+        }
+
+        img{
+            width: 340px;
+            height: 360px;
+        }
+        
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .black{
+            background: black;
+            height:64%;
+            width: 100%; 
+        }
+
+        .white{
+            background: white;
+            height: 11%;
+            width: 100%; 
+        }
+
+        .white2{
+            background: white;
+            height: 40%;
+            width: 100%; 
+        }
+
+        .wrap{
+            height: 130vh;
+        }
+
+        p{
+            text-align: center;
+        }
+
+        .knewave-regular 
+        {
+            font-family: "Knewave", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
+        .nunito-sans-text 
+        {
+        font-family: "Nunito Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100,
+            "YTLC" 500;
+        }
+
+        p{
+            margin:10px;
+        }
+
+
+    </style>
+
+    <!-- I wanted there to be a thank you message after clicking submit-->
+    <script> 
+        function showThankYouMessage() {
+            alert("Thank you for signing up! We will be in touch soon.");
+        }
+    </script>
+
+    <body>
+
+        <div class = "wrap">
+
+            <audio id="catspeech" autoplay loop>
+                <source src="catspeech.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+
+            <div class = "black"> 
+
+                <div>
+                    <h1 class = "knewave-regular">Paw & Order</h1>
+                    <h4 class = "nunito-sans-text">The Purrfect Lawyers</h4>
+                </div>
+        
+                <div style = "text-align: center;">
+                    <img src = "images/headshot.JPG", alt = "our team", class="center">
+                    <h3 class = "nunito-sans-text", style="text-align: center; color: #ffffff;">Simon B., Penelope F., and John S.</h3>
+                    <p class = "nunito-sans-text", style = "color:white;">The worlds highest rated lawyers</p>
+                </div>
+
+                <div style = "text-align: center; padding-bottom:15px">
+                    <button onclick="document.getElementById('catspeech').play()">Hear Us Out!</button>
+                </div>
+
+                <div style = "text-align: center; background-color:rgb(157, 0, 255); border: 5px solid rgb(255, 251, 11)"> <!--This div adds links-->
+
+                    <p>
+                        <ul>
+                            <li style="display:inline-flex; padding-inline: 20px;">
+                                <a href="#" style = "color: black">Home</a>
+                            </li>
+
+                            <li style="display:inline-flex; padding-inline: 20px;">
+                                <a href="#" style = "color: black">About Us</a>
+                            </li>
+
+                            <li style="display:inline-flex; padding-inline: 20px;">
+                                <a href="#" style = "color: black">Follow Us</a>
+                            </li>
+
+                            <li style="display:inline-flex; padding-inline: 20px;">
+                                <a href="#" style = "color: black">Contact</a>
+                            </li>
+                        </ul>
+                    </p>
+
+                </div>
+    
+            </div>
+    
+            <div class = "white">
+    
+                <p class = "nunito-sans-text", style = "padding-left: 28%; padding-right: 28%; padding-bottom: 50px;">
+                    Our firm specializes in providing exceptional legal counsel with precision and diligence. Combining a commitment to justice with strategic expertise, we offer a client-centered approach tailored to meet diverse legal needs. Whether navigating complex cases or advocating for fair outcomes, we prioritize integrity, professionalism, and, above all, results.
+                </p>
+
+    
+            </div>
+
+            <div class = "black">
+                <div style="text-align: center;">
+                    <h2 style = "color: #ffffff; padding-top:50px;"><strong>Meet Larry</strong></h2>
+                    
+                    <img src = "images/larry.jpg", alt = "our team", class="center", style = "height: 360px; width: 400px;">
+
+                    <p class = "nunito-sans-text", style = "color:#ffffff; padding-left: 28%; padding-right: 28%; padding-top:15px; padding-bottom: 50px; font-size:16px;">
+                        Larry, a free-spirited tabby, was shockingly accused of the ultimate feline crime: being “too silly.” The punishment? A jaw-dropping 17 years in the dreaded Explosion Chamber—a fate no cat should ever face! But fear not, because at Paw & Order Law Associates, we believe every cat deserves a fair chance to land on their feet.
+
+                        Through our tireless efforts, Larry's sentence was reduced to just 3 months of community service.
+
+                        This case embodies our philosophy: Every cat deserves nine lives!
+                    </p>
+
+                </div>
+                
+
+            </div>
+
+
+
+            <div class = "white2">
+
+                <div style="text-align: center;">
+
+                    <h3 class = "nunito-sans-text", style = "padding:30px">We Can Help You Too!</h3>
+
+                    <fieldset style="padding:30px">
+                        <legend>Sign Up for More Info!</legend>
+                        <label>First Name:<br />
+                        <input type="text" name="firstName" /></label><br />
+                        <label>Last Name:<br />
+                        <input type="text" name="lastName" /></label><br />
+                        <label>Email:<br />
+                        <input type="text" name="email" /></label>
+                        <p></p>
+                        <input type="submit" value="Submit" onclick="showThankYouMessage()" />
+                    </fieldset>
+
+                </div>
+    
+            </div>
+
+        </div>
+        
+    </body>
+
+
+</html>
