@@ -1,0 +1,11 @@
+﻿Bilash Sarkar
+Prof. Hishon 
+CISC 3300 S25 
+In class assignment 8 
+
+
+1. In certain programming languages the source code is not directly translated by the target machine. Instead, a different program, called the Javascript, reads and executes the code. This is called an interpretive language. 
+2. Type checking is performed at runtime, means that the type of a variable is allowed to change over its lifetime, this is called Dynamic typing. 
+3. The automatic conversion of values from one data type to another is called Type Juggling/Type Coercion
+4. Variables are mutable and hold references to objects stored in memory. 
+5. Strict Equal Checks if two values are equal without type coercion.
