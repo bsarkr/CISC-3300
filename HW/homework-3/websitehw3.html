@@ -1,0 +1,416 @@
+<!--
+Bilash Sarkar
+Prof. Hishon
+2-13-25
+HW3 
+
+I had a lot of difficulty with this and the formating is inconsitant at times.
+For example, I can get the image to wrap around the text properly. 
+Additionally, I can't get the left flexbox to align at the top. for some reason it keeps going down no matter what I edit.
+
+
+-->
+
+<html>
+
+    <head>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <style>
+
+            h1{
+                margin:5px;
+                font-family: "Bodoni Moda SC", serif;
+            }
+
+            body{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Raleway", sans-serif;
+            }
+
+            p{
+                margin:0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .flex-containerCol{
+                display: flex;
+
+                flex-direction: column;
+
+                align-items: center;
+
+            }
+
+            .flex-containerRow {
+                display: flex;
+                align-items: center; 
+                justify-content: flex-start; 
+            }
+            
+
+            .flex-topLinkLogIn{
+                width: 62%;
+                height: 30px;
+                background-color: rgb(141, 0, 0);
+                display: flex;
+                align-items: center;
+                font-size:14px;
+                justify-content: end;
+                padding-right: 5px;
+            }
+
+            .flex-topLinksBar{
+                width: 37%;
+                height: 30px;
+                background-color:  rgb(45, 45, 45); /* Gray area */
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                padding-right: 15px;
+            }
+
+            .flex-topLinks ul {
+                display: flex;
+                margin: 0;
+                padding-right: 0;
+            }
+
+            .flex-topLinks li {
+                display: inline-flex;
+                padding-right: 13px;
+                font-size:13px;
+            }
+
+            .flex-topLinks a {
+                color: rgb(224, 224, 224);
+                text-decoration: none;
+                text-align: left;
+            }
+
+            .flex-fordhamHead{
+                width: 100%;
+                height: 65px;
+            }
+
+            .flex-undergradText{
+                width: 100%;
+                height: 100px;
+                background-color: rgb(141, 0, 0);
+
+            }
+
+            .flex-links{
+                width: 100%;
+                height: 35px;
+                background-color: rgb(45, 45, 45);
+                display: flex;
+                align-items: center;
+            }
+
+            .flex-leftMain{
+                width: 200px;
+                height: 300px;
+                align-items: left;
+                padding-left:150px;
+            }
+
+            .flex-leftLinks{
+                width: 200px;
+                height: 75px;
+                background-color: rgb(237, 237, 237);
+                display: flex; /* Changed from 'flexbox' */
+                flex-direction: column;
+                align-items: flex-start; /* Centers horizontally */
+                justify-content: center; /* Centers vertically */
+                list-style-type: none;
+                padding-left: 15px;
+            }
+
+            .flex-leftLinks li{
+                margin-bottom: 10px;
+                font-size: 16px;
+                
+            }
+
+            .flex-leftLinks a{
+                text-decoration: none;
+                color: rgb(89, 89, 89); /* Optional: Ensures text is visible */
+
+            }
+
+            .flex-leftLinks a:hover{
+                text-decoration: underline;
+                color: rgb(151, 151, 151); /* Optional: Ensures text is visible */
+
+            }
+
+            .flex-leftMain button{
+                width: 215px;
+                height: 70px;
+                background-color: rgb(141, 0, 0);
+                color: white;
+                font-size: 18px;
+                border:0;
+            }
+            
+            .flex-leftMain button:hover{
+                width: 215px;
+                height: 70px;
+                background-color: rgb(165, 0, 0);
+                color: white;
+                font-size: 18px;
+                border:0;
+            }
+
+            .flex-directoryLinks {
+                width: 100%;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                padding-right: 15px;
+            }
+
+            .flex-directoryLinks li {
+                display: inline;
+                padding: 0 10px; 
+            }
+
+            .flex-directoryLinks li:not(:first-child)::before {
+                content: " /";
+                color: rgb(89, 89, 89);
+                padding-right: 15px;
+            }
+
+            .flex-directoryLinks a{
+                text-decoration: none;
+                color: rgb(89, 89, 89); 
+
+            }
+
+            .bodyText{
+                font-size: 18px;
+                padding: 3px;
+            }
+
+            .bodyText a{
+                color:rgb(141, 0, 0);
+            }
+
+            .RightMainText{
+                margin-right: 450px;
+            }
+
+            .text-content {
+                flex: 1; 
+                padding-right: 50px;
+            }
+
+            .cs-image {
+                width: 200px; 
+                height: auto; 
+                
+            }
+
+            .image-content {
+                flex: 0 0 auto; 
+                margin-left: auto; 
+            }
+            
+
+
+        </style>
+    </head>
+
+
+    <body>
+
+        
+        <div class="flex-containerRow">
+            <!-- Log In Section -->
+            <div class="flex-topLinkLogIn">
+                <a href="#" style="color: white; text-decoration: none; padding-right:10px">Log In</a>
+            </div>
+
+            <!-- Gray Area with Links -->
+            <div class="flex-topLinksBar">
+                <ul class="flex-topLinks">
+                    <li><a href="#">Information For</a></li>
+                    <li><a href="#">Find a degree</a></li>
+                    <li><a href="#">Find People</a></li>
+                    <li><a href="#">Apply</a></li>
+                    <li><a href="#">Visit</a></li>
+                    <li><a href="#">Give</a></li>
+                    <li><a href="#">News</a></li>
+                </ul>
+            </div>
+        </div>
+        
+
+        <div class = "flex-containerRow"> <!--Fordham Text-->
+            <div class = "flex-fordhamHead">
+                <h1 style = "padding-left: 20px; padding-top: 15px; color: rgb(139, 4, 4)">Fordham University</h1>
+            </div>
+
+        </div>
+
+        <div class = "flex-containerRow"> <!--Undergraduate Admissions-->
+             <div class = "flex-undergradText">
+                <h1 style = "color: white; font-size: 50px; padding-left: 20px; padding-top: 20px;">Undergraduate Admissions</h1>
+
+             </div>
+
+        </div>
+
+        <div class = "flex-containerRow">
+            <div class = "flex-links">
+                
+                <ul>
+
+                    <li style="display:inline-flex; padding-right: 15px;">
+                        <a href="#" style = "color: rgb(224, 224, 224); text-decoration: none;">Why Fordham</a>
+                    </li>
+
+                    <li style="display:inline-flex; padding-right: 15px;">
+                        <a href="#" style = "color: rgb(224, 224, 224);  text-decoration: none;">Majors and Minors</a>
+                    </li>
+
+                    <li style="display:inline-flex; padding-right: 15px;">
+                        <a href="#" style = "color: rgb(224, 224, 224); text-decoration: none;">Choose Your Campus</a>
+                    </li>
+                    
+                    <li style="display:inline-flex; padding-right: 15px;">
+                        <a href="#" style = "color: rgb(224, 224, 224); text-decoration: none;">Outcomes</a>
+                    </li>
+
+                    <li style="display:inline-flex; padding-right: 15px;">
+                        <a href="#" style = "color: rgb(224, 224, 224); text-decoration: none;">Visit</a>
+                    </li>
+
+                    <li style="display:inline-flex; padding-right: 15px;">
+                        <a href="#" style = "color: rgb(224, 224, 224); text-decoration: none;">Apply</a>
+                    </li>
+
+                    <li style="display:inline-flex; padding-right: 15px;">
+                        <a href="#" style = "color: rgb(224, 224, 224); text-decoration: none;">International Students</a>
+                    </li>
+
+                    <li style="display:inline-flex; padding-right: 15px;">
+                        <a href="#" style = "color: rgb(224, 224, 224); text-decoration: none;">Transfer Students</a>
+                    </li>
+
+                    <li style="display:inline-flex">
+                        <a href="#" style = "color: rgb(224, 224, 224); text-decoration: none;">Contact Us</a>
+                    </li>
+
+                 </ul>
+                
+
+            </div> 
+
+        </div>
+
+
+        <!--OKAYY NOW FOR THE ACTUAL HOMEWORK ROFL-->
+        <div class = "flex-containerRow">
+            <div class = "flex-containerCol">
+
+                <div class = " flex-leftMain"> 
+                    <h4 style = "color: rgb(141, 0, 0); font-size: 17px">Majors and Minors</h4>
+
+                    <ul class="flex-leftLinks">
+                        <li><a href="#" style = "text-align: left;">What's Your Passion?</a></li>
+                        <li><a href="#" style = "text-align: left;">Accelerated Degree Programs</a></li>
+                    </ul>
+
+                    <button type = "button" on click = "#">Majors and Minors</button> </button>
+
+                </div>
+                
+
+            </div>
+
+            <div class="flex-containerCol" style="padding-left: 180px; align-items: flex-start;">
+                
+                <ul class = "flex-directoryLinks">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Admissions and Aid</a></li>
+                    <li><a href="#">Undergraduate Admissions</a></li>
+                    <li><a href="#">Majors and Minors</a></li>
+                    <li><a href="#">Computer Science</a></li>
+
+                </ul>
+
+
+                <h1 style="color:rgb(141, 0, 0); font-size: 50px; text-align: left;">Computer Science</h1>
+
+
+                <p class = "bodyText" style = "padding-top: 30px">Degree Options: Major, Minor</p>
+
+                <p class = "bodyText">Locations: Lincoln Center, Rose Hill</p>
+
+                <p class = "bodyText">Visit the <a href = "#">Computer and Information Science Department</a></p>
+
+                <h3 style = "margin-right:150px; font-size:22px">
+                    Wherever there’s a computer, there’s a skilled person developing, maintaining, hacking, advancing or simply using it. 
+                    Be that person.
+                </h3>
+
+                <div class = "RightMainText">
+    
+                    <div class="flex-containerRow">
+                        <div class="text-content">
+                            <p class="bodyText">
+                                It’s difficult to imagine life without computers when they’re so central to our information-driven global society.
+                                But it’s not difficult to imagine the amazing pursuits you’ll be prepared for with a degree in computer science
+                                from Fordham’s department of Computer and Information Sciences.
+                            </p>
+                    
+                            <p class="bodyText">
+                                The computer science major emphasizes science and technology, including software design and programming,
+                                computer architecture and functions, and the development of an ability to analyze and solve problems in 
+                                using the computer as a tool.
+                            </p>
+                        </div>
+
+
+                        <div class="image-content">
+                            <img src="https://www.fordham.edu/media/review/content-assets/migrated/images/iStock_000021097427Medium.jpg" alt="Computer Science Image" class="cs-image">
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <p class = "bodyText" style = "margin-right:150px; padding-bottom:20px;">
+                    Get inspired by the classes we offer. Programming. Bioinformatics. Robotics. 
+                    Video game design. Cyber security. Networking. Database management. Health and medical informatics.
+                </p>
+
+                <p class = "bodyText" style = "margin-right:150px; padding-bottom:20px;">
+                    Our faculty members are active researchers driven by intellectual curiosity and the desire to make an impact. 
+                    Join them in one of our labs. Requirements: open mind, warm heart, and lots of passion.
+                </p>
+
+                <p class = "bodyText" style = "margin-right:150px; padding-bottom:20px;">
+                    You’ll learn more than computer science here. You’ll also study philosophy, theology, history, mathematics, languages,
+                     and the performing arts through Fordham’s common core curriculum, the centerpiece of our liberal arts education. 
+                     We want you to excel in your field—and as a human being.
+                </p>
+
+
+
+            </div>
+        </div>
+
+    </body>
+
+</html>

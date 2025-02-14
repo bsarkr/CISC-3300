@@ -1,0 +1,17 @@
+﻿Bilash Sarkar
+Prof. Hishon
+2-13-25
+HW 3
+
+
+1. Compare and contrast Flexbox and CSS grid, how are they alike and how are they
+Different?
+
+
+Flexbox and CSS grids are alike in the sense that they both function in rows/columns to create “boxes” that structure a webpage. However, flexbox is one-dimensional such that it can only work with either rows or columns, not both. CSS grid is two-dimensional and can change rows and columns at the same time.
+
+
+2. What’s responsive design in web development and how do we implement it?
+
+
+Responsive design refers to creating web pages that adapt dynamically to different screen sizes and devices. It’s implemented through the the @media style.
