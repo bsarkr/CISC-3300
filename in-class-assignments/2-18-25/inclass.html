@@ -1,0 +1,47 @@
+<!--
+Bilash Sarkar
+Prof. Hishon
+In Class 10
+
+-->
+
+<!--
+1. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page. 
+
+2. To select a dom element by its id we can use document.getElementbyID(...). 
+
+3. If you add HTML to a page using innerHTML (or several jQuery methods), you need to be aware of Cross-Site Scripting Attacks or CCS; 
+otherwise, an attacker could gain access to your users' accounts.
+
+4. HTML events are actions that happen to HTML elements. 
+
+5. Event Listeners are a more recent approach to handling events. They can deal with more than one function at a time 
+
+-->
+
+<html>
+
+    <body>
+
+        <div id = "first-div" onclick = "replaceTxt()">initial text</div>
+
+    </body>
+
+
+    <script>
+
+        function replaceTxt()
+        {
+            const firstDiv = document.getElementById('first-div');
+            firstDiv.textContent = 'added text!';
+            firstDiv.style.backgroundColor = 'lightyellow';
+
+        }
+
+
+    </script>
+    
+</html>
+
+
+
