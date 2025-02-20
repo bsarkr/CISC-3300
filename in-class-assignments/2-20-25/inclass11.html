@@ -1,0 +1,47 @@
+<!-- 
+Bilash Sarkar
+Prof. Hishon
+In class 11 
+
+-->
+
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>AJAX</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+
+    <body>
+
+        <button id="ajax-get">
+            ajax get
+        </button>
+
+        <div id="container"></div>
+
+        <script>
+            $('#ajax-get').on('click', function () {
+                $.ajax({
+                    url: 'http://localhost:8888/cats',
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        console.log(data);
+
+                        $.each(data, function (key, value) {
+                        console.log(value)
+                            $('#container').append(`
+                            <div class="user">${value['name']}</div>
+                            `)
+                        })
+                    }
+                });
+            })
+
+        </script>
+    </body>
+ 
+</html>
