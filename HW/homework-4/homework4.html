@@ -1,0 +1,176 @@
+<!--
+Bilash Sarkar
+Prof. Hishon
+2-20-25
+Homework 4
+
+-->
+
+<!--
+1. How does an interpreted programming language differ from a compiled language? 
+In a compiled language, the program, once compiled, is expressed in the instructions of the target machine; this machine code 
+is undecipherable by humans. However, in an interpreted language, the source code is not directly translated by the target machine. 
+Instead, the interpreter reads and executes the code.
+
+2. Contrast dynamically typed programming languages with statically typed ones. And contrast strongly typed programming
+languages with weakly typed ones. 
+Dynamically typed languages check types at runtime, allowing variable types to change, 
+while statically typed languages check types at compile time, binding types to variables. Weakly typed languages allow implicit type 
+conversions, while strongly typed languages enforce strict type rules through the compiler.
+
+3. What is the difference between var, let, and const when declaring variables in JS? 
+Var is old school, global, or function scoped and can be redeclared. let is block scoped and can be redeclared. const 
+is also block scoped but cannot be redeclared.
+
+4. What are anonymous functions? Higher order functions? Callback functions? First class functions? 
+An anonymous function is a function without a name. Higher-order functions return a function or take other functions as arguments.
+Callback functions are passed as an argument to another function to be called later. First-class functions are functions in are 
+treated like other variables.
+
+5. Define objects in JavaScript. 
+An object is a collection of properties, and a property is an association between a name (or key) and a value.
+
+-->
+
+
+<html>
+
+    <style>
+
+
+    </style>
+
+
+
+
+    <script>
+
+
+        //question 6
+        const cats = 
+        [
+            {
+                name: 'Charlie',
+                adoptionStatus: 'available'
+            },
+            {
+                name: 'Lily',
+                adoptionStatus: 'not-available'
+            },
+            {
+                name: 'Coco',
+                adoptionStatus: 'available'
+            },
+            {
+                name: 'Oreo',
+                adoptionStatus: 'not-available'
+            },
+            {
+                name: 'Luna',
+                adoptionStatus: 'available'
+            },
+            {
+                name: 'Milo',
+                adoptionStatus: 'available'
+            },
+            {
+                name: 'Lola',
+                adoptionStatus: 'not-available'
+            },
+            {
+                name: 'Leo',
+                adoptionStatus: 'available'
+            },
+            {
+                name: 'Willow',
+                adoptionStatus: 'available'
+            },
+            {
+                name: 'Bella',
+                adoptionStatus: 'not-available'
+            },
+            {
+                name: 'Max',
+                adoptionStatus: 'available'
+            },
+            {
+                name: 'Cleo',
+                adoptionStatus: 'available'
+            },
+            {
+                name: 'Lucy',
+                adoptionStatus: 'not-available'
+            },
+            {
+                name: 'Daisy',
+                adoptionStatus: 'available'
+            }
+        ];
+
+        let availableCats = [];
+
+        for(let i = 0; i<cats.length; i++){
+
+            if(cats[i].adoptionStatus == 'available'){
+                availableCats.push(cats[i]);
+            }
+        }
+
+        for(let i = 0; i<availableCats.length; i++)
+        {
+            console.log(availableCats[i].name + ' is available for adoption! yay!' + "\n");
+        }
+
+
+        //question 7
+        let randomNum = Math.random()*10;
+
+       if(randomNum>5)
+            console.log('Greater than five!');
+        else if(randomNum<5)
+            console.log('Less than five!');
+        else
+            console.log('Equal to five!');
+
+
+        //question 8
+        for(let  i = 0; i<cats.length; i++)
+        {
+            console.log(i+1 + "\nName: " + cats[i].name + "\nStatus: " + cats[i].adoptionStatus + "\n");
+        }
+
+        //question 9
+        let var1 = 1;
+        let stringvar1 = '1';
+
+        if(var1 == stringvar1)
+            console.log(true);
+        
+
+        if(var1 === stringvar1)
+            console.log(false);
+        
+
+        //question 10
+
+        const catNames = cats.map(cat => cat.name + " is a cat.");
+
+        console.log(catNames);
+
+
+
+    </script>
+
+
+
+    
+    
+
+    <body>
+
+
+
+    </body>
+
+
+</html>
