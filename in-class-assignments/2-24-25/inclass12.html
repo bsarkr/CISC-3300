@@ -1,0 +1,47 @@
+<!--
+Bilash Sarkar
+Prof. Hishon
+In Class 2-24-25
+
+
+1. Code that is being run within a function is known as an function context. 
+
+2. In JavaScript variables and functions within each execution context are created before they are executed, 
+this is called hoisting. 
+
+3. In each JavaScript execution context, the scope is the current execution context's variables object, plus the 
+variables object for each parent execution context, this is called scope chain 
+
+4. Encapsulation in object-oriented programming (OOP) is the practice of bundling data and methods into a single unit, 
+or class. It also involves restricting direct access to some of the data 
+
+-->
+
+<html>
+    <title>In Class 12</title>
+
+    <body>
+
+    </body>
+
+    <script>
+
+        //question 5 start
+        function printHello() {
+            console.log('hello');
+            let name = 'pinecone';
+            printPinecone();
+
+            function printPinecone() {
+                console.log(name);
+            }
+        }
+
+        printHello();
+        //question 5 end
+
+        
+
+    </script>
+
+</html>
