@@ -1,0 +1,50 @@
+﻿Bilash Sarkar
+Prof. Hishon
+Homework 5
+2-27-25
+
+1. What is the DOM? What is meant by the DOM tree? 
+The Document Object Model (DOM) is a programming interface for web documents. As a browser loads a web page, it creates a model of that page. The model is called a DOM tree, and it is stored in the browser's memory. It consists of four main types of nodes: document nodes, element nodes, attribute nodes, and text nodes. 
+
+
+2. What is an XSS attack? How do they work? How can you guard against them?
+
+
+An XSS attack happens when a malicious user injects code into an input field that later gets displayed as HTML, potentially running for other users and compromising their accounts. To guard against this, avoid treating user input as raw HTML whenever possible. If displaying user input is necessary, validate it properly and remove any harmful content by stripping tags or escaping characters.
+
+
+3. What is an event in JavaScript? What kind of events can you respond to with code? 
+
+
+An event in JavaScript is something that happens to an HTML element like a user clicking a button or typing in a form. These events are triggered by user interactions or the browser itself, and they can run specific code in response.
+
+
+4. How does a DOM eventListener work? What are the parameters it is expecting? 
+A DOM event listener watches for a specific event on an element and runs a function when that event happens. It takes the event type (like “click” or “keydown”), a callback function to execute when triggered, and an optional third parameter that decides if the event should be captured in the capturing or bubbling phase.
+
+
+
+
+
+
+5. What is jQuery? Why use it? How do we load jQuery onto a page? 
+
+
+jQuery is a lightweight JavaScript library that simplifies coding by letting you do more with less code. It makes common tasks, like handling events or modifying HTML, way easier by wrapping them into simple methods. To use jQuery, you can load it through a CDN, just like Bootstrap.
+
+
+
+
+6. What is AJAX? JSON? The HTTP method types and what they do? 
+
+
+AJAX (Asynchronous JavaScript and XML) lets web pages update specific parts without reloading the whole thing by exchanging data with a server in the background. JSON (JavaScript Object Notation) is a lightweight format used to send and receive data between a server and a webpage. HTTP methods define the type of request being made: GET retrieves data, POST sends new data, PUT updates existing data, and DELETE removes data. Browsers use the built-in XMLHttpRequest object (or fetch API) to handle these requests asynchronously.
+
+
+7. Write some data in the JSON format. You can use this site https://jsonformatter.org/ to check if it’s in the right format, making use of the “validate” button. 
+
+{ "name":"John",
+   "age":30,
+   "cars":["Ford", "BMW", "Fiat"]
+}
+

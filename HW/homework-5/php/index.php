@@ -1,3 +1,12 @@
+<!--
+Bilash Sarkar
+Prof. Hishon
+HW 5
+2-27-25
+
+PHP setup
+-->
+
 <?php
 
 //we need this to accept requests from any domain
