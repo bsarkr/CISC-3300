@@ -1,0 +1,42 @@
+<!--
+Bilash Sarkar
+Prof. Hishon
+Homework 5
+
+
+-->
+<html>
+    <head>
+        <title>Change List Item Color</title>
+
+    </head>
+    <body>
+
+        <h2>Click Any Item To Change The Color</h2>
+        <ul id="list">
+            <li>Macbook Air M2</li>
+            <li>iPhone 15 Pro</li>
+            <li>Airpod Max</li>
+            <li>Airpods Pro</li>
+            <li>Apple Watch Series 9</li>
+        </ul>
+
+        <script>
+            //colors to cycle through
+            const colors = ["lightblue", "lightgreen", "purple", "orange", "pink"];
+
+            const listItems = document.querySelectorAll("#list li");
+
+            //looping through list to assign a color
+            listItems.forEach((item) => {
+                let colorIndex = 0; // Track current color index
+
+                item.addEventListener("click", function() {
+                    this.style.backgroundColor = colors[colorIndex]; 
+                    colorIndex = (colorIndex + 1) % colors.length; //moves to the next color and loops
+                });
+            });
+        </script>
+
+    </body>
+</html>
