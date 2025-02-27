@@ -29,14 +29,15 @@ Question 8 Answer
             const listItems = document.querySelectorAll("#list li");
 
             //looping through list to assign a color
-            listItems.forEach((item) => {
-                let colorIndex = 0; // Track current color index
-
+            listItems.forEach((item, index) => {
                 item.addEventListener("click", function() {
-                    this.style.backgroundColor = colors[colorIndex]; 
-                    colorIndex = (colorIndex + 1) % colors.length; //moves to the next color and loops
+                    if (!this.style.backgroundColor) { 
+                        this.style.backgroundColor = colors[index]; // Assigns a unique color
+                    }
                 });
             });
+
+            
         </script>
 
     </body>
