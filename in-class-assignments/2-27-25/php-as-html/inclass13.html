@@ -1,0 +1,51 @@
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>AJAX</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+
+    <style>
+        .client {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid black;
+            background-color: lightgray;
+        }
+    </style>
+
+    <body>
+
+        <button id="ajax-get">
+            Get Client Info
+        </button>
+
+        <div id="container"></div>
+
+        <script>
+            $('#ajax-get').on('click', function () {
+                $.ajax({
+                    url: 'http://localhost:8888/clients',
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        console.log(data);
+
+                        $.each(data, function (key, value) {
+                        console.log(value);
+                        $('#container').append(`
+                            <div class="client">
+                                <strong>Name:</strong> ${value['name']} <br>
+                                <strong>Price:</strong> $${value['price']}
+                            </div>
+                        `);
+                    });
+                    }
+                });
+            })
+
+        </script>
+    </body>
+ 
+</html>
