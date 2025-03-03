@@ -2,7 +2,7 @@
 
 require 'classes/threePieceSuit.php';
 
-use _3_3_25\classes\threePieceSuit;
+use _3_3_25\classes;
 
 $suit1 = new threePieceSuit('Go Getter', 3999);
 $suit2 = new threePieceSuit('Not to brag', 3000000);
