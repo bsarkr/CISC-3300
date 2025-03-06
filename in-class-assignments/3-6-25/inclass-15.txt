@@ -1,0 +1,7 @@
+CISC 3300 SP25 
+In class assignment 15 
+1. Several predefined variables in PHP are superglobals, which means they are available in all scopes throughout a script. There is no need to do global $variable; to access them within functions or methods. 
+2. When data is added to a query string at the end of a URL, the PHP interpreter adds that data to a superglobal array called $_GET so that the PHP page can access it 
+3. Escaping means replacing every unsafe character with an escape sequence that tells the interpreter it should interpret the character as text and not as a special character
+4. MVC is an architectural/design pattern that separates an application into three main logical components Model, View, and Controller. 
+5. REST is an architectural style that uses HTTP requests to access and manipulate data in a uniform and consistent way. 
