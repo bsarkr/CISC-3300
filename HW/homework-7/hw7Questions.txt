@@ -1,0 +1,37 @@
+Bilash Sarkar
+Prof. Hishon
+CISC 3300 S25 
+3-13-25
+Homework 7 
+
+1. What is a class? What is an object? What is OOP? 
+A class is a template for creating objects. It defines properties and methods that each object will have. Unlike JavaScript, classes are required in PHP for object creation.
+
+
+2. Why use an abstract class in OOP? 
+An abstract class is useful in OOP because it provides a base structure for other classes without being instantiated itself. It allows for high-level functionality while leaving specific details to be implemented by child classes. It also lets the parent class define default methods, acting as a template for templates.
+
+
+
+
+3. What are superglobals in PHP, what are some examples of data they provide? 
+Superglobals in PHP are built-in variables that are accessible from any scope within a script without needing to be declared as global. They store important data like form inputs, session information, and server details. Examples include $_GET and $_POST for handling form data, $_SESSION for user sessions, and $_SERVER for server and request information.
+
+
+4. What are the two steps to setting up and using a class via namespaces? 
+To use a class from a namespace, define the namespace in the class. When using it in a class, either type the full namespace each time ($postsModel = new app\models\Post();) or import it with use app\models\Post; and then instantiate it normally ($postsModel = Post();).
+
+
+5. What is MVC? Detail the different parts. 
+
+
+MVC (Model-View-Controller) is a design pattern that separates an application into three components: Model, which handles data and business logic; View, which manages the user interface and presentation; and Controller, which processes user input and updates the Model or View accordingly. This separation helps isolate concerns, making applications more modular and maintainable.
+
+
+6. If I had a resource called users in my application that was designed with RESTFUL URI design, what would the URI and HTTP verbs be for: 
+a. getting all users GET /users
+b. getting one users GET /users/{id}
+c. saving a user POST /users
+d. editing a user PUT /users/{id}
+e. deleting a user PUT /users/{id}
+ 
