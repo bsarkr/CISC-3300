@@ -15,33 +15,29 @@ class noteController{
 
     public function createNote(){
 
-        //responses erray to store a status and a message
-        $response = ["status" => "error", "message" => "something went wrong :("]; //setting a default response incase something doesn't work
-
         if($_SERVER['REQUEST_METHOD'] === 'POST') //checks if form was submitted
         {
             //adding input validation
-            $title = htmlspecialchars($_POST, ['title']); //initializing title
-            $description = htmlspecialchars($_POST, ['description']); //initializing description
+            $title = htmlspecialchars($_POST['title']); //initializing title
+            $description = htmlspecialchars($_POST['description']); //initializing description
 
             if(strlen($title)<3){ //checking if title is too short
-                $response["message"] = "Title must include more than 3 characters :/"; //updating response message
-                echo json_encode($response); 
-                return;
+                header("Location: index.php?page=add-note&error=Title must be at least 3 characters long!"); //changes the url to appropriate error
+                exit();
             }
 
             if(strlen($description)<10){ //checking if the description is too short
-                $response["message"] = "Description must include more than 10 characters!!"; //updating response message
-                echo json_encode($response);
-                return;
+                header("Location: index.php?page=add-note&error=Description must be at least 10 characters long!"); //changes the url to appropriate error
+                exit();
             }
 
-            //updating response for when note is submitted w/ no errors
-            $response["status"] = "Success";
-            $response["message"] = "Note Submitted Successfully";
+            //changes url to appropriate success url
+            header("Location: index.php?page=add-note&success=1");
+            exit();
             
         }
-        echo json_encode($response);
+        header("Location: index.php?page=add-note&error=Invalid request"); //in case none of the above work
+        exit();
 
     }
 
