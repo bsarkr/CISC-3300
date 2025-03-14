@@ -8,8 +8,6 @@ Prof. Hishon
 3-13-25
 */
 
-require_once __DIR__ . '/../controllers/controller.php';
-
 ?>
 
 <html>
@@ -59,20 +57,12 @@ require_once __DIR__ . '/../controllers/controller.php';
     <title>Notes</title>
 
     <body>
+        <p id = "message"></p> <!--shows success or error message-->
 
-        <?php if(isset($_GET['success'])): ?> <!--Checks if 'success' is in the url-->
-            <p class = "success">Note Successfully Created</p>
-        <?php endif; ?>
+        <form id = "note-form">
 
-        <?php if(isset($_GET['error'])): ?> <!--Checks if 'error' is in the url-->
-            <p class = "error"><?= htmlspecialchars($_GET['error']); ?></p>
-        <?php endif; ?>
-
-        <!--creating the form-->
-        <form action="index.php?page=save-note" method="POST">
-
-            <label for = "title">Title</label> <!--Promping from a note title-->
-            <input type = "text" id = "Title" name  = "title" required>
+            <label for = "title">Title</label> <!--Promping for a note title-->
+            <input type = "text" id = "title" name  = "title" required>
 
             <label for = "description">Description</label> <!--Prompting for a note decription-->
             <textarea id = "description" name = "description"></textarea> <!--using a textarea because description is longer-->
@@ -81,7 +71,34 @@ require_once __DIR__ . '/../controllers/controller.php';
 
         </form>
 
-    <body>
+        <script>
+
+            document.getElementById("note-form").addEventListener("submit", function (event) {
+                event.preventDefault(); //stops the page from refreshing when the form is submitted.
+
+                //getting the form input values
+                const title = document.getElementById("title").value;
+                const description = document.getElementById("description").value;
+
+                //sending daa to server using POST
+                fetch("index.php?page=save-note", {
+                    method: "POST",
+                    headers: {"Content-Type": "application/x-www-form-urlencoded" },
+                    body: `title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`
+                })
+
+                    .then(response => response.json()) //parses json response
+                    .then(data => {
+                        //console.log("Server Response:", data); debugging
+                        const messageElement = document.getElementById("message");
+                        messageElement.textContent = data.message; //updating the message
+                        messageElement.className = data.status; //for styling
+                    })
+                    .catch(error => console.error("Error:", error)); //for errors
+            });
+
+        </script>
+
+    </body>
 
 </html> 
-
