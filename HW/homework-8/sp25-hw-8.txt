@@ -1,0 +1,20 @@
+Bilash Sarkar
+Prof. Hishon
+CISC 3300 S25 
+Homework 8 
+
+
+1. What are sessions and cookies? What do they do? 
+Sessions and cookies track user data across web pages. A cookie is a small text file stored in the browser that sends data back to the server on each request. The server accesses this data with $_COOKIE in PHP. A session stores data server-side, often using a session ID in a cookie, allowing the server to remember things like login status without storing data in the browser.
+
+
+2. What is SQL? MySQL? What are relational databases? 
+SQL (Structured Query Language) is a standard language used to create and manipulate databases. MySQL is a relational database management system (RDBMS) that uses SQL queries to manage data. In a relational database, data is organized in tables, and relationships between pieces of data allow for easy access and identification based on their connections to each other.
+
+
+3. What is normalization in SQL? 
+Normalization in SQL is the process of organizing database tables and columns to avoid data duplication and ensure data integrity. It involves creating relationships between tables so that data can scale efficiently and dependencies are properly enforced. This helps maintain consistency and reduces redundancy in the database.
+
+
+4. What are primary and foreign keys? 
+Primary keys are unique identifiers for rows in a table, typically the first column, while foreign keys are columns that link to the primary key of another table, establishing a relationship between the two and ensuring data integrity.
