@@ -1,0 +1,28 @@
+Bilash Sarkar
+Prof. Hishon
+CISC 3300 S25 
+Homework 9 
+
+1. What are relationships in SQL? Joins? 
+
+In SQL, relationships refer to how data in one table relates to data in another table within a relational database. These relationships are usually defined using primary keys (unique identifiers for rows in a table) and foreign keys (references to primary keys in another table). A JOIN allows us to combine rows from two or more tables based on a related column between them.
+
+
+2. How do joins and relationships interact? 
+
+Joins and relationships work together to connect data between tables. Relationships like one-to-one, one-to-many, and many-to-many show how records are linked.
+
+
+3. What’s a PDO? a DSN? 
+
+A PDO (PHP Data Object) is a built-in PHP class that helps you connect to and interact with a database. You use it to send SQL queries and get results back. To create a PDO connection, you use a DSN (Data Source Name), which is a string that holds the connection details like the database type, name, and host. Since the DSN often includes sensitive info like passwords, it should be stored in a .env file that isn’t shared on GitHub.
+
+
+4. What are prepared statements? Why do we need them? 
+
+A prepared statement is a parameterized and reusable SQL query which forces the developer to write the SQL command and the user-provided data separately. We need them to prevent SQL injection vulnerabilities. 
+
+
+5. What does an .env file do? 
+
+A .env file stores environment variables, which are values set outside your code, usually by the operating system. This file helps keep things like passwords or database info separate from your code, so your app can run in different environments without changing the code itself.
