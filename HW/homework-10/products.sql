@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 01, 2025 at 05:22 PM
+-- Generation Time: Apr 05, 2025 at 06:57 PM
 -- Server version: 8.0.40
 -- PHP Version: 8.3.14
 
@@ -39,10 +39,33 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `description`, `created_at`) VALUES
-(1, 'Kitty Brush', 'to brush away the pain and suffering', '2025-04-01 13:25:41'),
-(2, 'hamburgur', 'hamburgur', '2025-04-01 13:26:34'),
-(3, 'diamond pickaxe', 'to mine diamonds', '2025-04-01 13:27:29'),
-(4, 'bobcoin', 'limited crypto currency', '2025-04-01 13:30:05');
+(1, 'Kitty Brush', 'To brush away the pain and suffering', '2025-04-01 13:25:41'),
+(2, 'hamburger', 'hamburger', '2025-04-01 13:26:34'),
+(3, 'diamond pickaxe', 'mines diamonds really well!', '2025-04-01 13:27:29'),
+(4, 'bobcoin', 'limited crypto currency', '2025-04-01 13:30:05'),
+(5, 'Mouse', 'what noise does a mouse make??', '2025-04-05 17:52:23'),
+(8, 'Airpods', 'Good audio quality very nice!', '2025-04-05 18:44:29'),
+(9, 'hammer', 'great tool for building a shed!', '2025-04-05 18:47:05');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
