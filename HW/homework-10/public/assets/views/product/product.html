@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Product Validation</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+            a {
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div style = "text-align: center; margin-top: 20px;">
+            <h1 style="font-size: 4em; font-weight: bold;">
+                <span style="color: #E53238;">e</span>
+                <span style="color: #0064D2;">B</span>
+                <span style="color: #F5AF02;">a</span>
+                <span style="color: #8BBF26;">y</span>
+            </h1>
+            <h4>Browse products in your local neighborhood!</h4>
+        </div>
+        
+
+
+        <div class="container mt-3 w-26">
+            <div class="row">
+                <div class="input-group mb-3" style="margin-top: 20px;">
+                    <input id="search-text" type="text" class="form-control" placeholder="search for a product" aria-label="Recipient's product" aria-describedby="button-addon2">
+                    <button id="search-button" class="btn btn-primary" type="button" id="button-addon2">Search</button>
+                </div>
+                
+            </div>
+
+            <div class="container products-form margin-thirty" style="padding-bottom: 30px;">
+                <div class="row" style="margin-top: 20px;">
+                    <div class="col-6">
+                        <h2>Products</h2>
+                    </div>
+                    <div class="col-6 text-end">
+                        <a href="/new-product" class="btn btn-success">Add Product</a>
+                    </div>
+                </div>
+                <div id="products-container" class="margin-ten"></div>
+            </div>
+
+
+            <div class="row">
+                <div id="product-container"></div>
+            </div>
+
+
+
+        </div>
+        <script>
+
+$(document).ready(function () {
+        $.ajax({
+            url: `http://localhost:8888/api/products`,
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                displayProducts(data);
+            }
+        });
+
+        $("#search-button").click(function () {
+            const url = $('#search-text').val() ? `http://localhost:8888/api/products?name=${$('#search-text').val()}` : `http://localhost:8888/api/products`;
+            $.ajax({
+                url: url,
+                type: "GET",
+                dataType: "json",
+                success: function (data) {
+                    displayProducts(data);
+                }
+            });
+        })
+
+        function displayProducts(data) {
+            $('#product-container').html('')
+            $.each(data, function (key, value) {
+                $('#product-container').append(`
+                    <div class="product-container" style="margin-bottom: 20px; display: flex; justify-content: space-between; border: 5px solid #ccc; padding: 10px;">
+                        <span class="product" style="width: 70%;">${value['name']}</span>
+                        <span style="width: 30%; text-align: right;">
+                            <a href="productDetails/${value['id']}" class="btn btn-primary">view</a>
+                            <a href="delete-product/${value['id']}" class="btn btn-danger">delete</a>
+                        </span>
+                    </div>
+                `)
+            });
+        }
+    })
+        </script>
+    </body>
+</html>
